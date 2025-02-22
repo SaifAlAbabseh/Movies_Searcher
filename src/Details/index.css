@@ -1,0 +1,67 @@
+.detailsParentBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.movieDetailsParent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.movieDetailsLeftSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.movieDetailsRightSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1rem;
+}
+
+.movieDetailsPoster {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 10px;
+}
+
+.movieDetailsTitle {
+    font-size: 2vw;
+    max-width: 800px;
+    word-wrap: break-word;
+    color: rgb(14, 133, 40);
+    text-align: center;
+}
+
+.otherMovieDetails {
+    color: white;
+}
+
+.movieDetailsInfo {
+    color: rgb(14, 133, 40);
+}
+
+.otherMovieDetailsParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 800px;
+    max-height: 600px;
+    overflow: auto;
+    gap: 2rem;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1035px){
+    body {
+        height: 100%;
+    }
+}

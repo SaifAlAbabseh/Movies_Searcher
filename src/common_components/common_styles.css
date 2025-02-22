@@ -1,0 +1,172 @@
+.Parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(41, 41, 41);
+}
+
+.topNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    gap: 1rem;
+    height: max-content;
+    width: 100%;
+    background-color: rgb(14, 133, 40);
+}
+
+.topNavBarElements {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.bottomFooterBar {
+    height: 8vh;
+    background-color: rgb(14, 133, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    color: white;
+}
+
+.topNavBarElement {
+    font-size: 2vw;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.5s color;
+}
+
+.selected,
+.topNavBarElement:hover {
+    color: rgb(41, 41, 41);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #3498db;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.resultParentBox {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.movieCard {
+    min-width: 300px;
+    max-width: 300px;
+    height: max-content;
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.5s all;
+    padding: 10px 0;
+}
+
+.movieCard:hover {
+    background-color: rgb(14, 133, 40);
+}
+
+.movieCard:hover .movieTitle {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.movieCard:hover .movieTitle,
+.movieCard:hover .movieYear {
+    color: white;
+}
+
+.movieTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moviePoster {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.movieYear, .movieTitle {
+    color: rgb(14, 133, 40);
+    transition: 0.5s color;
+}
+
+.moreDetailsLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.5s color;
+}
+
+.moreDetailsLink:hover {
+    color: yellow;
+    font-weight: bolder;
+}
+
+.favoriteButton {
+    font-size: 2rem;
+    color: red;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+.errorMessage {
+    width: 100%;
+    text-align: center;
+    color: red;
+}
